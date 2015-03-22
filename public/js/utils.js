@@ -58,4 +58,10 @@ var SignUp = {
 $(document).ready(function () {
     $("#registerForm .alert").hide();
     $("div.profile .alert").hide();
+
+    // hide the nav bar in 5 seconds
+    setTimeout(function(){
+        $('.nav-bar').css('opacity', 0.3);
+    }, 3000);
+
 });

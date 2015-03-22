@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         {{ get_title() }}
         {{ stylesheet_link('css/bootstrap.min.css') }}
+        {{ stylesheet_link('css/naked.css') }}
     </head>
     <body>
         {{ content() }}

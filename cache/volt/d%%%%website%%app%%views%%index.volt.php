@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <?php echo $this->tag->getTitle(); ?>
         <?php echo $this->tag->stylesheetLink('css/bootstrap.min.css'); ?>
+        <?php echo $this->tag->stylesheetLink('css/naked.css'); ?>
     </head>
     <body>
         <?php echo $this->getContent(); ?>

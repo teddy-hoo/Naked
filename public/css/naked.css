@@ -1,0 +1,37 @@
+.nav-bar {
+	position: fixed;
+	bottom: 12px;
+	right: 5%;
+	width: 90%;
+	box-shadow: 0px 0px 6px 1px;
+	border-color: transparent;
+	opacity: 0.9;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+}
+
+.nav-bar:hover{
+	opacity: 0.9 !important;
+}
+
+.carousel {
+  min-height: 500px;
+  margin-bottom: 60px;
+}
+
+.carousel-caption {
+  z-index: 10;
+}
+
+.carousel .item {
+  min-height: 500px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 500px;
+}
