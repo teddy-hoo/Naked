@@ -13,7 +13,7 @@ class Elements extends Component
     private $_headerMenu = array(
         'navbar-left' => array(
             'index' => array(
-                'caption' => 'Home',
+                'caption' => 'Posts',
                 'action' => 'index'
             ),
             'invoices' => array(
