@@ -64,4 +64,10 @@ $(document).ready(function () {
         $('.nav-bar').css('opacity', 0.3);
     }, 3000);
 
+    setTimeout(function(){
+        $('#messager').hide()
+    }, 3000);
+
+    
+
 });

@@ -1,7 +1,6 @@
-<!-- <div class="container">
+<div id="messager">
     {{ flash.output() }}
-    <hr>
-</div> -->
+</div>
 {{ content() }}
 <div class="container" id='nav-bar'>
     <nav class="navbar navbar-default navbar-inverse nav-bar" role="navigation">
@@ -19,6 +18,3 @@
         </div>
     </nav>
 </div>
-<!-- <footer>
-    <p>&copy; Company 2014</p>
-</footer> -->

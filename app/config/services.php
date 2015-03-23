@@ -112,9 +112,9 @@ $di->set('session', function() {
  */
 $di->set('flash', function(){
 	return new FlashSession(array(
-		'error'   => 'alert alert-danger',
-		'success' => 'alert alert-success',
-		'notice'  => 'alert alert-info',
+		'error'   => 'danger',
+		'success' => 'success',
+		'notice'  => 'info',
 	));
 });
 
