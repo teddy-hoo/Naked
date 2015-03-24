@@ -68,6 +68,18 @@ $(document).ready(function () {
         $('#messager').hide()
     }, 3000);
 
-    
+    $('#nextPost').hover(function(){
+        $("#post").addClass("next-post");
+    },
+    function(){
+        $("#post").removeClass("next-post");
+    });
+
+    $('#prePost').hover(function(){
+        $("#post").addClass("pre-post");
+    },
+    function(){
+        $("#post").removeClass("pre-post");
+    });
 
 });

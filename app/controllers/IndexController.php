@@ -11,8 +11,15 @@ class IndexController extends ControllerBase
     public function indexAction()
     {
         if (!$this->request->isPost()) {
-            $this->flash->success('This is a sample application of the Phalcon Framework.
-                Please don\'t provide us any personal information. Thanks');
+
+            $this->view->title = 'title';
+            $this->view->content = 'content';
+            $this->flash->success('We select the best posts suit for you!');
+
+            $blogs = Blogs::find();
+
+            // title = 'title';
+
         }
     }
 }
