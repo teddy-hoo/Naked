@@ -21,7 +21,7 @@ class Auth {
 		}
 
 		$controller->cookies->set('auth', 
-								  $user->uid), 
+								  $user->uid, 
 								  time() + 86400 * 30);
 
 	}

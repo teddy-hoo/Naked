@@ -9,7 +9,7 @@ class RegisterController extends ControllerBase {
     
     }
 
-    pirvate function registerUser () {
+    private function registerUser () {
 
         $request        = $this->request;
         $name           = $request->getPost('name', array('string', 'striptags'));

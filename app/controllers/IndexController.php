@@ -14,12 +14,9 @@ class IndexController extends ControllerBase
 
             $this->view->title = 'title';
             $this->view->content = 'content';
-            $this->flash->success('We select the best posts suit for you!');
+            $this->flash->success('We select the best posts suiting for you!');
 
             $blogs = Blogs::find();
-
-
-            // title = 'title';
 
         }
     }

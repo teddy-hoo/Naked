@@ -3,8 +3,7 @@
 use Phalcon\Mvc\Model\Criteria;
 use Phalcon\Paginator\Adapter\Model as Paginator;
 
-class ProductTypesController extends ControllerBase
-{
+class ProductTypesController extends ControllerBase {
     public function initialize()
     {
         $this->tag->setTitle('Manage your products types');

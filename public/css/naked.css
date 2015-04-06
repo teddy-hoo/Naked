@@ -86,3 +86,28 @@
 	transform: scale(0.9) translateX(3.8%);
 	box-shadow: 0px 0px 10px 1px silver;
 }
+
+#write {
+	position: absolute;
+	right: 20%;
+	top: 5px;
+	height: 30px;
+  	width: 30px;
+  	text-align: center;
+  	border-radius: 15px;
+  	padding-top: 5px;
+  	transition: width .25s ease-in-out, right .25s ease-in-out;
+	-moz-transition: width  .25s ease-in-out, right .25s ease-in-out;
+	-webkit-transition: width .25s ease-in-out, right .25s ease-in-out;
+	overflow: hidden;
+	cursor: pointer;
+	border-color: #808080;
+ 	border-style: solid;
+ 	border-width: 1px;
+}
+
+#write:hover {
+	width: 120px;
+	right: 18%;
+	cursor: 
+}

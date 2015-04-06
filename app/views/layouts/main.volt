@@ -2,6 +2,10 @@
     {{ flash.output() }}
 </div>
 {{ content() }}
+<div id='write'>
+    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+    <span id="write-text">write posts</span>
+</div>
 <div class="container" id='nav-bar'>
     <nav class="navbar navbar-default navbar-inverse nav-bar" role="navigation">
         <div class="container-fluid">
