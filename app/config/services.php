@@ -69,7 +69,7 @@ $di->set('volt', function($view, $di) {
 	$volt = new VoltEngine($view, $di);
 
 	$volt->setOptions(array(
-		"compiledPath" => APP_PATH . "cache/volt/"
+		"compiledPath"  => APP_PATH . "cache/volt/"
 	));
 
 	$compiler = $volt->getCompiler();
@@ -105,6 +105,12 @@ $di->set('session', function() {
 	$session = new SessionAdapter();
 	$session->start();
 	return $session;
+});
+
+$di->set('cookies', function () {
+	$cookies = new Phalcon\Http\Response\Cookies();
+	$cookies->useEncryption(false);
+	return $cookies;
 });
 
 /**

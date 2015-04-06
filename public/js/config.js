@@ -1,0 +1,1 @@
+var LOAD_POSTS_URL = '/blogs'

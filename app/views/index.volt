@@ -8,6 +8,8 @@
     </head>
     <body>
         {{ content() }}
+        {{ javascript_include('js/config.js') }}
+        {{ javascript_include('js/blogs.js') }}
         {{ javascript_include('js/jquery.min.js') }}
         {{ javascript_include('js/bootstrap.min.js') }}
         {{ javascript_include('js/utils.js') }}

@@ -8,23 +8,9 @@ use Phalcon\Mvc\User\Plugin;
 use Phalcon\Mvc\Dispatcher;
 use Phalcon\Acl\Adapter\Memory as AclList;
 
-/**
- * SecurityPlugin
- *
- * This is the security plugin which controls that users only have access to the modules they're assigned to
- */
-class SecurityPlugin extends Plugin
-{
+class SecurityPlugin extends Plugin {
 
-	/**
-	 * Returns an existing or new access control list
-	 *
-	 * @returns AclList
-	 */
-	public function getAcl()
-	{
-
-		//throw new \Exception("something");
+	public function getAcl() {
 
 		if (!isset($this->persistent->acl)) {
 
@@ -88,21 +74,10 @@ class SecurityPlugin extends Plugin
 		return $this->persistent->acl;
 	}
 
-	/**
-	 * This action is executed before execute any action in the application
-	 *
-	 * @param Event $event
-	 * @param Dispatcher $dispatcher
-	 */
 	public function beforeDispatch(Event $event, Dispatcher $dispatcher)
 	{
 
-		$auth = $this->session->get('auth');
-		if (!$auth){
-			$role = 'Guests';
-		} else {
-			$role = 'Users';
-		}
+		$role = Auth::getRole($this);
 
 		$controller = $dispatcher->getControllerName();
 		$action = $dispatcher->getActionName();

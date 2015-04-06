@@ -2,17 +2,17 @@
 {{ content() }}
 
 <div class="page-header">
-    <h2>Register for INVO</h2>
+    <h2>Register for Naked</h2>
 </div>
 
-{{ form('register', 'id': 'registerForm', 'onbeforesubmit': 'return false') }}
+{{ form('register', 'id': 'registerForm', 'role': 'form') }}
 
     <fieldset>
 
         <div class="control-group">
-            {{ form.label('name', ['class': 'control-label']) }}
+            <label for="name">Name</label>
             <div class="controls">
-                {{ form.render('name', ['class': 'form-control']) }}
+                {{ text_field('name', 'class': "form-control") }}
                 <p class="help-block">(required)</p>
                 <div class="alert alert-warning" id="name_alert">
                     <strong>Warning!</strong> Please enter your full name
@@ -21,9 +21,9 @@
         </div>
 
         <div class="control-group">
-            {{ form.label('username', ['class': 'control-label']) }}
+            <label for="username">Username</label>
             <div class="controls">
-                {{ form.render('username', ['class': 'form-control']) }}
+                {{ text_field('username', 'class': "form-control") }}
                 <p class="help-block">(required)</p>
                 <div class="alert alert-warning" id="username_alert">
                     <strong>Warning!</strong> Please enter your desired user name
@@ -32,9 +32,9 @@
         </div>
 
         <div class="control-group">
-            {{ form.label('email', ['class': 'control-label']) }}
+            <label for="email">Email</label>
             <div class="controls">
-                {{ form.render('email', ['class': 'form-control']) }}
+                {{ text_field('email', 'class': "form-control") }}
                 <p class="help-block">(required)</p>
                 <div class="alert alert-warning" id="email_alert">
                     <strong>Warning!</strong> Please enter your email
@@ -43,9 +43,9 @@
         </div>
 
         <div class="control-group">
-            {{ form.label('password', ['class': 'control-label']) }}
+            <label for="password">Password</label>
             <div class="controls">
-                {{ form.render('password', ['class': 'form-control']) }}
+                {{ password_field('password', 'class': "form-control") }}
                 <p class="help-block">(minimum 8 characters)</p>
                 <div class="alert alert-warning" id="password_alert">
                     <strong>Warning!</strong> Please provide a valid password
@@ -64,7 +64,7 @@
         </div>
 
         <div class="form-actions">
-            {{ submit_button('Register', 'class': 'btn btn-primary', 'onclick': 'return SignUp.validate();') }}
+            {{ submit_button('Register', 'class': 'btn btn-primary') }}
             <p class="help-block">By signing up, you accept terms of use and privacy policy.</p>
         </div>
 

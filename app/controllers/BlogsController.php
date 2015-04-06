@@ -1,12 +1,7 @@
 <?php
 
-class IndexController extends ControllerBase
+class BlogsController extends ControllerBase
 {
-    public function initialize()
-    {
-        $this->tag->setTitle('Posts');
-        parent::initialize();
-    }
 
     public function indexAction()
     {
@@ -23,4 +18,16 @@ class IndexController extends ControllerBase
 
         }
     }
+
+    public function loadAction () {
+
+        $newBlog = new Blogs();
+
+        if (!$this->request->isPost()) {
+
+        }
+
+    }
+
+
 }

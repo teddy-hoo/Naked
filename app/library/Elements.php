@@ -73,7 +73,7 @@ class Elements extends Component
     public function getMenu()
     {
 
-        $auth = $this->session->get('auth');
+        $auth = Auth::isLoggedIn($this);
         if ($auth) {
             $this->_headerMenu['navbar-right']['session'] = array(
                 'caption' => 'Log Out',

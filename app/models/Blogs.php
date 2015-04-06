@@ -7,6 +7,16 @@ use Phalcon\Mvc\Model;
  */
 class Blogs extends Model{
     
-    
+    public $bid;
+    public $author_id;
+    public $title;
+    public $content;
+    public $key_words;
+
+    public function initialize () {
+
+    	$this->belongsTo('author_id', 'Users', 'uid');
+
+    }
 
 }
