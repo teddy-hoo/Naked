@@ -2,6 +2,18 @@
 
 class Auth {
 
+	public static function getUser ($controller) {
+
+		if ($controller->cookies->has('auth')) {
+			$uid = $controller->cookies->get('auth');
+			$user = Users::findFirstByUid(intval($uid));
+			return $user;
+		}
+
+		return null;
+
+	}
+
 	public static function registerSession ($controller, $user) {
 
 		if ($controller->cookies->has('auth')) {
@@ -9,7 +21,7 @@ class Auth {
 		}
 
 		$controller->cookies->set('auth', 
-								  sha1($user->uid . $user->name), 
+								  $user->uid), 
 								  time() + 86400 * 30);
 
 	}
