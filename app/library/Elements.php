@@ -24,8 +24,8 @@ class Elements extends Component
                 'caption' => 'About',
                 'action' => 'index'
             ),
-            'contact' => array(
-                'caption' => 'Contact',
+            'blogs' => array(
+                'caption' => 'Blogs',
                 'action' => 'index'
             ),
         ),
@@ -43,8 +43,8 @@ class Elements extends Component
             'action' => 'index',
             'any' => false
         ),
-        'Companies' => array(
-            'controller' => 'companies',
+        'Blogs' => array(
+            'controller' => 'blogs',
             'action' => 'index',
             'any' => true
         ),

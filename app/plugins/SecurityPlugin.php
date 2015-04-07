@@ -18,7 +18,6 @@ class SecurityPlugin extends Plugin {
 
 			$acl->setDefaultAction(Acl::DENY);
 
-			//Register roles
 			$roles = array(
 				'users'  => new Role('Users'),
 				'guests' => new Role('Guests')
@@ -27,9 +26,8 @@ class SecurityPlugin extends Plugin {
 				$acl->addRole($role);
 			}
 
-			//Private area resources
 			$privateResources = array(
-				'companies'    => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
+				'blogs'        => array('index'),
 				'products'     => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
 				'producttypes' => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
 				'invoices'     => array('index', 'profile')
@@ -38,20 +36,18 @@ class SecurityPlugin extends Plugin {
 				$acl->addResource(new Resource($resource), $actions);
 			}
 
-			//Public area resources
 			$publicResources = array(
 				'index'      => array('index'),
 				'about'      => array('index'),
 				'register'   => array('index'),
 				'errors'     => array('show404', 'show500'),
 				'session'    => array('index', 'register', 'start', 'end'),
-				'contact'    => array('index', 'send')
+				'blogs'      => array('index')
 			);
 			foreach ($publicResources as $resource => $actions) {
 				$acl->addResource(new Resource($resource), $actions);
 			}
 
-			//Grant access to public areas to both users and guests
 			foreach ($roles as $role) {
 				foreach ($publicResources as $resource => $actions) {
 					foreach ($actions as $action){

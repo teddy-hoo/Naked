@@ -3,10 +3,9 @@
 use Phalcon\Mvc\Model\Criteria;
 use Phalcon\Paginator\Adapter\Model as Paginator;
 
-class CompaniesController extends ControllerBase
-{
-    public function initialize()
-    {
+class BlogsController extends ControllerBase {
+    
+    public function initialize () {
         $this->tag->setTitle('Manage your companies');
         parent::initialize();
     }

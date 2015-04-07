@@ -3,8 +3,10 @@
 </div>
 {{ content() }}
 <div id='write'>
-    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-    <span id="write-text">write posts</span>
+    <a href='/blogs'>
+        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+        <span id="write-text">write posts</span>
+    </a>
 </div>
 <div class="container" id='nav-bar'>
     <nav class="navbar navbar-default navbar-inverse nav-bar" role="navigation">
